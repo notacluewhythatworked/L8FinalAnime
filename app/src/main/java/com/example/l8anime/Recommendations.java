@@ -9,6 +9,7 @@ public class Recommendations {
     private Genre_Romance[] romance;
     private Genre_SchoolLife[] schoolLife;
     private Genre_Scifi[] scifi;
+    private PreviousResults[] previous;
 
 
 }
