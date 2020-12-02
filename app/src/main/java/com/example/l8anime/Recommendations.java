@@ -11,5 +11,4 @@ public class Recommendations {
     private Genre_Scifi[] scifi;
     private PreviousResults[] previous;
 
-
 }
