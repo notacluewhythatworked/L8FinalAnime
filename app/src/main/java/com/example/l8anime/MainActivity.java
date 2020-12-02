@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Switch;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private Switch action;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private Switch romance;
     private Switch schoolLife;
     private Switch scifi;
+    private TextView defaultTV;
 
 
     @Override
@@ -30,9 +32,30 @@ public class MainActivity extends AppCompatActivity {
         romance = findViewById(R.id.romanceSwitch);
         schoolLife = findViewById(R.id.schoolLifeSwitch);
         scifi = findViewById(R.id.scifiSwitch);
+        defaultTV = findViewById(R.id.defaultTV);
     }
 
     public void onSubmitClick(View view){
+        defaultTV.setText("");
 
+        if(action.isChecked()){
+            defaultTV.append("action is checked.");
+        } else if(comedy.isChecked()){
+            defaultTV.append("\ncomedy is checked.");
+        } else if(drama.isChecked()){
+            defaultTV.append("\ndrama is checked.");
+        } else if(horror.isChecked()) {
+            defaultTV.append("\nhorror is checked.");
+        } else if(mystery.isChecked()) {
+            defaultTV.append("\nmystery is checked.");
+        } else if(romance.isChecked()){
+            defaultTV.append("\nromance is checked.");
+        } else if(schoolLife.isChecked()){
+            defaultTV.append("\nschool life is checked.");
+        } else if(scifi.isChecked()) {
+            defaultTV.append("\nsci-fi is checked.");
+        } else {
+            defaultTV.setText("There is nothing selected. :)");
+        }
     }
 }
