@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     public void onSubmitClick(View view){
         defaultTV.setText("");
 
+        //probably something simple, but we want ALL included values. it is currently displaying only the first result.
         if(action.isChecked()){
             defaultTV.append("action is checked.");
         } else if(comedy.isChecked()){
@@ -57,5 +58,9 @@ public class MainActivity extends AppCompatActivity {
         } else {
             defaultTV.setText("There is nothing selected. :)");
         }
+    }
+
+    public void emptyMethodTemp(){
+
     }
 }
