@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private Switch schoolLife;
     private Switch scifi;
     private TextView defaultTV;
+    Recommendations recommendations = new Recommendations();
 
 
     @Override
@@ -35,28 +36,53 @@ public class MainActivity extends AppCompatActivity {
         defaultTV = findViewById(R.id.defaultTV);
     }
 
-    public void onSubmitClick(View view){
+    public void onSubmitClick(View view) {
         defaultTV.setText("");
 
-        //probably something simple, but we want ALL included values. it is currently displaying only the first result.
-        if(action.isChecked()){
+        //check if Action is checked
+        if (action.isChecked()) {
             defaultTV.append("action is checked.");
-        } else if(music.isChecked()){
+        }
+
+        //check if Music is checked
+        if (music.isChecked()) {
             defaultTV.append("\ncomedy is checked.");
-        } else if(drama.isChecked()){
+        }
+
+        //check if Drama is checked
+        if (drama.isChecked()) {
             defaultTV.append("\ndrama is checked.");
-        } else if(horror.isChecked()) {
+        }
+
+        //check if Horror is checked
+        if (horror.isChecked()) {
             defaultTV.append("\nhorror is checked.");
-        } else if(mystery.isChecked()) {
+        }
+
+        //check if Mystery is checked
+        if (mystery.isChecked()) {
             defaultTV.append("\nmystery is checked.");
-        } else if(romance.isChecked()){
+        }
+
+        //check if Romance is checked
+        if (romance.isChecked()) {
             defaultTV.append("\nromance is checked.");
-        } else if(schoolLife.isChecked()){
+        }
+
+        //check if School Life is checked
+        if (schoolLife.isChecked()) {
             defaultTV.append("\nschool life is checked.");
-        } else if(scifi.isChecked()) {
+        }
+
+        //check if SciFi is checked
+        if (scifi.isChecked()) {
             defaultTV.append("\nsci-fi is checked.");
-        } else {
-            defaultTV.setText("There is nothing selected. :)");
+        }
+
+        //IF all others fail and the TextView is still blank, return an error
+        if (defaultTV.getText().toString().matches("")) {
+            defaultTV.setText(recommendations.errorReturn());
+            defaultTV.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
         }
     }
 

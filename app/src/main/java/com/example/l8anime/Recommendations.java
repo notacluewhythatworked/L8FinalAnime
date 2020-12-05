@@ -11,5 +11,9 @@ public class Recommendations {
     private Genre_Scifi[] scifi;
     private PreviousResults[] previous;
 
+    public String errorReturn(){
+        String error1 = "There is no genre selected. Please select at least one genre and try again.";
+        return error1;
+    }
 
 }
