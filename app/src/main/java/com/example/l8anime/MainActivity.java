@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private Switch action;
-    private Switch comedy;
+    private Switch music;
     private Switch drama;
     private Switch horror;
     private Switch mystery;
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         action = findViewById(R.id.actionSwitch);
-        comedy = findViewById(R.id.comedySwitch);
+        music = findViewById(R.id.musicSwitch);
         drama = findViewById(R.id.dramaSwitch);
         horror = findViewById(R.id.horrorSwitch);
         mystery = findViewById(R.id.mysterySwitch);
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         //probably something simple, but we want ALL included values. it is currently displaying only the first result.
         if(action.isChecked()){
             defaultTV.append("action is checked.");
-        } else if(comedy.isChecked()){
+        } else if(music.isChecked()){
             defaultTV.append("\ncomedy is checked.");
         } else if(drama.isChecked()){
             defaultTV.append("\ndrama is checked.");

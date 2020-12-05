@@ -2,7 +2,7 @@ package com.example.l8anime;
 
 public class Recommendations {
     private Genre_Action[] action;
-    private Genre_Comedy[] comedy;
+    private Genre_Music[] music;
     private Genre_Drama[] drama;
     private Genre_Horror[] horror;
     private Genre_Mystery[] mystery;

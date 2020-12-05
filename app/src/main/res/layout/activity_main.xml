@@ -55,10 +55,10 @@
         app:layout_constraintVertical_bias="0.279" />
 
     <Switch
-        android:id="@+id/comedySwitch"
+        android:id="@+id/musicSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Comedy"
+        android:text="Music"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.766"
