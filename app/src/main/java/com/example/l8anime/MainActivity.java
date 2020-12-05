@@ -9,15 +9,23 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private Switch action;
-    private Switch music;
     private Switch drama;
     private Switch horror;
+    private Switch music;
     private Switch mystery;
     private Switch romance;
     private Switch schoolLife;
     private Switch scifi;
     private TextView defaultTV;
     Recommendations recommendations = new Recommendations();
+    boolean actionState = false;
+    boolean dramaState = false;
+    boolean horrorState = false;
+    boolean musicState = false;
+    boolean mysteryState = false;
+    boolean romanceState = false;
+    boolean schoolLifeState = false;
+    boolean scifiState = false;
 
 
     @Override
@@ -41,42 +49,50 @@ public class MainActivity extends AppCompatActivity {
 
         //check if Action is checked
         if (action.isChecked()) {
-            defaultTV.append("action is checked.");
-        }
-
-        //check if Music is checked
-        if (music.isChecked()) {
-            defaultTV.append("\ncomedy is checked.");
+            defaultTV.append("Action is checked.");
+            actionState = true;
         }
 
         //check if Drama is checked
         if (drama.isChecked()) {
-            defaultTV.append("\ndrama is checked.");
+            defaultTV.append("\nDrama is checked.");
+            dramaState = true;
         }
 
         //check if Horror is checked
         if (horror.isChecked()) {
-            defaultTV.append("\nhorror is checked.");
+            defaultTV.append("\nHorror is checked.");
+            horrorState = true;
+        }
+
+        //check if Music is checked
+        if (music.isChecked()) {
+            defaultTV.append("\nMusic is checked.");
+            musicState = true;
         }
 
         //check if Mystery is checked
         if (mystery.isChecked()) {
-            defaultTV.append("\nmystery is checked.");
+            defaultTV.append("\nMystery is checked.");
+            mysteryState = true;
         }
 
         //check if Romance is checked
         if (romance.isChecked()) {
-            defaultTV.append("\nromance is checked.");
+            defaultTV.append("\nRomance is checked.");
+            romanceState = true;
         }
 
         //check if School Life is checked
         if (schoolLife.isChecked()) {
-            defaultTV.append("\nschool life is checked.");
+            defaultTV.append("\nSchool Life is checked.");
+            schoolLifeState = true;
         }
 
         //check if SciFi is checked
         if (scifi.isChecked()) {
-            defaultTV.append("\nsci-fi is checked.");
+            defaultTV.append("\nSci-Fi is checked.");
+            scifiState = true;
         }
 
         //IF all others fail and the TextView is still blank, return an error
@@ -84,9 +100,5 @@ public class MainActivity extends AppCompatActivity {
             defaultTV.setText(recommendations.errorReturn());
             defaultTV.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
         }
-    }
-
-    public void emptyMethodTemp(){
-
     }
 }
