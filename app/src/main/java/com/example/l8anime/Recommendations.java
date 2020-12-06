@@ -17,7 +17,9 @@ public class Recommendations {
 
     public void actionRecommend(){
         if (switches.actionState = true){
-
+            //attempting to access the array's size so we can have a dynamically changing size and not worry about not including some results because of restraints
+            //after accessing the array size, generate a random number for a recommendation
+            getRandNum(action.action());
         }
     }
 
@@ -61,13 +63,6 @@ public class Recommendations {
         if(switches.scifiState = true){
 
         }
-    }
-
-
-    //returns an error to MainActivity
-    public String errorReturn(){
-        String error1 = "There is no genre selected. Please select at least one genre and try again.";
-        return error1;
     }
 
     //Generates a random number based on ArrayList sizes to retrieve a title
