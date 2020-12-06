@@ -7,11 +7,10 @@
     tools:context=".MainActivity2">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/recommendationOutput"
         android:layout_width="367dp"
         android:layout_height="437dp"
         android:gravity="center|center_horizontal|center_vertical"
-        android:text="TextView"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

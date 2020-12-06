@@ -12,6 +12,8 @@ public class Recommendations {
     Genre_SchoolLife schoolLife = new Genre_SchoolLife();
     Genre_Scifi scifi = new Genre_Scifi();
     MainActivity switches = new MainActivity();
+    MainActivity2 outputs = new MainActivity2();
+    int actionNumberGenerated = 0;
     private Random rng = new Random();
     private PreviousResults previous;
 
@@ -19,9 +21,10 @@ public class Recommendations {
         if (switches.actionState == true){
             //attempting to access the array's size so we can have a dynamically changing size and not worry about not including some results because of restraints
             //after accessing the array size, generate a random number for a recommendation
-            int actionNumberGenerated = 0;
             actionNumberGenerated = getRandNum(action.titlesA.size(), 0);
             previous.getAction()[0] = actionNumberGenerated;
+            action.titlesA.indexOf(actionNumberGenerated);
+//            outputs.outputView
         }
     }
 

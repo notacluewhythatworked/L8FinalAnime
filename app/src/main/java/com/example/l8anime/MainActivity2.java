@@ -6,9 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity2 extends AppCompatActivity {
     private Button goBackButton;
+    private TextView recommendationOutput;
+    Recommendations outputView = new Recommendations();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,11 @@ public class MainActivity2 extends AppCompatActivity {
     private void nextActivityOnClick() {
         Intent secondaryActivity = new Intent(MainActivity2.this, MainActivity.class);
         startActivityForResult(secondaryActivity, 0);
+    }
+
+    public void resultDisplay(){
+//        outputView.action.titlesA.indexOf();
+        recommendationOutput.setText(outputView.actionNumberGenerated);
     }
 
 //    public void messages(){
