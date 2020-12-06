@@ -3,9 +3,9 @@ package com.example.l8anime;
 import java.util.ArrayList;
 
 public class Genre_Mystery {
-
+    public ArrayList<String> titlesMy = new ArrayList<String>();
     public void mystery(String[] args){
-        ArrayList<String> titlesMy = new ArrayList<String>(10);
+
         titlesMy.add("The Promised Neverland");
         titlesMy.add("Bungo Stray Dogs");
         titlesMy.add("Durarara!!");

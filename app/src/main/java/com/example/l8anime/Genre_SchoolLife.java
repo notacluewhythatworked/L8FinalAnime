@@ -3,9 +3,8 @@ package com.example.l8anime;
 import java.util.ArrayList;
 
 public class Genre_SchoolLife {
-
+    public ArrayList<String> titlesSL = new ArrayList<String>();
     public void schoolLife(String[] args){
-        ArrayList<String> titlesSL = new ArrayList<String>(10);
         titlesSL.add("Chuunibyou demo Koi ga Shitai!");
         titlesSL.add("Rosario to Vampire");
         titlesSL.add("Kami nomi zo Shiru Sekai");

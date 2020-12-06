@@ -3,9 +3,8 @@ package com.example.l8anime;
 import java.util.ArrayList;
 
 public class Genre_Scifi {
-
+    public ArrayList<String> titlesSF = new ArrayList<String>();
     public void sciFi(String[] args){
-        ArrayList<String> titlesSF = new ArrayList<String>(10);
         titlesSF.add("Cowboy Bebop");
         titlesSF.add("Code Geass: Hangyaku no Lelouch");
         titlesSF.add("Neon Genesis Evangelion");

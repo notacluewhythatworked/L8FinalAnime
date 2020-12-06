@@ -42,18 +42,20 @@ public class MainActivity extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                onSubmitClick();
                 nextActivityOnClick();
             }
         });
     }
 
+    //instantiated for switching to the second UI
     private void nextActivityOnClick() {
         Intent secondaryActivity = new Intent(MainActivity.this, MainActivity2.class);
         startActivityForResult(secondaryActivity, 0);
     }
 
-
-    public void onSubmitClick(View view) {
+    //checks for switches that are true, and sets their states appropriately
+    public void onSubmitClick() {
         defaultTV.setText("");
 
         //check if Action is checked

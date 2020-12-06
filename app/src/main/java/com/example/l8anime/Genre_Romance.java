@@ -3,9 +3,8 @@ package com.example.l8anime;
 import java.util.ArrayList;
 
 public class Genre_Romance {
-
+    public ArrayList<String> titlesR = new ArrayList<String>();
     public void romance(String[] args){
-        ArrayList<String> titlesR = new ArrayList<String>(10);
         titlesR.add("Toradora!");
         titlesR.add("sankarea");
         titlesR.add("My Little Monster");

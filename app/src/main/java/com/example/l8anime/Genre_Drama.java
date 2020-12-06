@@ -3,9 +3,8 @@ package com.example.l8anime;
 import java.util.ArrayList;
 
 public class Genre_Drama {
-
+    public ArrayList<String> titlesD = new ArrayList<String>();
     public void drama(String[] args){
-        ArrayList<String> titlesD = new ArrayList<String>(10);
         titlesD.add("A Silent Voice");
         titlesD.add("ERASED");
         titlesD.add("Anohana: The Flower We Saw That Day");

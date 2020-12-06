@@ -28,4 +28,22 @@ public class MainActivity2 extends AppCompatActivity {
         Intent secondaryActivity = new Intent(MainActivity2.this, MainActivity.class);
         startActivityForResult(secondaryActivity, 0);
     }
+
+//    public void messages(){
+//        String outputs = null;
+//        switch (outputs) {
+//            case 1:
+//                String message1 = "Awesome choice! Here's the anime's we recommend for you:";
+//                break;
+//            case 2:
+//                String message2 = "Nice choices. Let's see what was recommended!";
+//                break;
+//            case 3:
+//                String message3 = "Interesting. Based on those choices, we recommend these:";
+//                break;
+//            case 4:
+//                String message4 = "Wasn't expecting that. But regardless, here's what we recommend:";
+//                break;
+//        }
+//    }
 }

@@ -3,9 +3,8 @@ package com.example.l8anime;
 import java.util.ArrayList;
 
 public class Genre_Music {
-
+    public ArrayList<String> titlesMu = new ArrayList<String>();
     public void music(String[] args){
-        ArrayList<String> titlesMu = new ArrayList<String>(10);
         titlesMu.add("K-On!");
         titlesMu.add("Shigatsu wa Kimi no Uso");
         titlesMu.add("Love Live! Sunshine!!");

@@ -13,55 +13,58 @@ public class Recommendations {
     Genre_Scifi scifi = new Genre_Scifi();
     MainActivity switches = new MainActivity();
     private Random rng = new Random();
-    private PreviousResults[] previous;
+    private PreviousResults previous;
 
     public void actionRecommend(){
-        if (switches.actionState = true){
+        if (switches.actionState == true){
             //attempting to access the array's size so we can have a dynamically changing size and not worry about not including some results because of restraints
             //after accessing the array size, generate a random number for a recommendation
-            getRandNum(action.action());
+            int actionNumberGenerated = 0;
+            actionNumberGenerated = getRandNum(action.titlesA.size(), 0);
+            previous.getAction()[0] = actionNumberGenerated;
         }
     }
 
     public void dramaRecommend(){
-        if(switches.dramaState = true){
+        if(switches.dramaState == true){
+            getRandNum(drama.titlesD.size(), 0);
 
         }
     }
 
     public void horrorRecommend(){
-        if(switches.horrorState = true){
-
+        if(switches.horrorState == true){
+            getRandNum(horror.titlesH.size(), 0);
         }
     }
 
     public void musicRecommend(){
-        if(switches.musicState = true){
-
+        if(switches.musicState == true){
+            getRandNum(music.titlesMu.size(), 0);
         }
     }
 
     public void mysteryRecommend(){
-        if(switches.mysteryState = true){
-
+        if(switches.mysteryState == true){
+            getRandNum(mystery.titlesMy.size(), 0);
         }
     }
 
     public void romanceRecommend(){
-        if(switches.romanceState = true){
-
+        if(switches.romanceState == true){
+            getRandNum(romance.titlesR.size(), 0);
         }
     }
 
     public void schoolLifeRecommend(){
-        if(switches.schoolLifeState = true){
-
+        if(switches.schoolLifeState == true){
+            getRandNum(schoolLife.titlesSL.size(), 0);
         }
     }
 
     public void scifiRecommend(){
-        if(switches.scifiState = true){
-
+        if(switches.scifiState == true){
+            getRandNum(scifi.titlesSF.size(), 0);
         }
     }
 
