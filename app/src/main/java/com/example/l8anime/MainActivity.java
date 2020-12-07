@@ -13,14 +13,15 @@ public class MainActivity extends AppCompatActivity {
     private Switch action, drama, horror, music, mystery, romance, schoolLife, scifi;
     private Button submitButton;
     private TextView defaultTV;
-    boolean actionState = false;
-    boolean dramaState = false;
-    boolean horrorState = false;
-    boolean musicState = false;
-    boolean mysteryState = false;
-    boolean romanceState = false;
-    boolean schoolLifeState = false;
-    boolean scifiState = false;
+    private int selectedGeneres = 0;
+    public static final int ACTION_BIT      = 0b00000001;
+    public static final int DRAMA_BIT       = 0b00000010;
+    public static final int HORROR_BIT      = 0b00000100;
+    public static final int MUSIC_BIT       = 0b00001000;
+    public static final int MYSTERY_BIT     = 0b00010000;
+    public static final int ROMANCE_BIT     = 0b00100000;
+    public static final int SCHOOLLIFE_BIT  = 0b01000000;
+    public static final int SCIFI_BIT       = 0b10000000;
 
 
     @Override
@@ -51,7 +52,8 @@ public class MainActivity extends AppCompatActivity {
     //instantiated for switching to the second UI
     private void nextActivityOnClick() {
         Intent secondaryActivity = new Intent(MainActivity.this, MainActivity2.class);
-        startActivityForResult(secondaryActivity, 0);
+        secondaryActivity.putExtra("selection", selectedGeneres);
+        startActivity(secondaryActivity);
     }
 
     //checks for switches that are true, and sets their states appropriately
@@ -61,49 +63,49 @@ public class MainActivity extends AppCompatActivity {
         //check if Action is checked
         if (action.isChecked()) {
             defaultTV.append("\nAction is checked.");
-            actionState = true;
+            selectedGeneres |= ACTION_BIT;
         }
 
         //check if Drama is checked
         if (drama.isChecked()) {
             defaultTV.append("\nDrama is checked.");
-            dramaState = true;
+            selectedGeneres |= DRAMA_BIT;
         }
 
         //check if Horror is checked
         if (horror.isChecked()) {
             defaultTV.append("\nHorror is checked.");
-            horrorState = true;
+            selectedGeneres |= HORROR_BIT;
         }
 
         //check if Music is checked
         if (music.isChecked()) {
             defaultTV.append("\nMusic is checked.");
-            musicState = true;
+            selectedGeneres |= MUSIC_BIT;
         }
 
         //check if Mystery is checked
         if (mystery.isChecked()) {
             defaultTV.append("\nMystery is checked.");
-            mysteryState = true;
+            selectedGeneres |= MYSTERY_BIT;
         }
 
         //check if Romance is checked
         if (romance.isChecked()) {
             defaultTV.append("\nRomance is checked.");
-            romanceState = true;
+            selectedGeneres |= ROMANCE_BIT;
         }
 
         //check if School Life is checked
         if (schoolLife.isChecked()) {
             defaultTV.append("\nSchool Life is checked.");
-            schoolLifeState = true;
+            selectedGeneres |= SCHOOLLIFE_BIT;
         }
 
         //check if SciFi is checked
         if (scifi.isChecked()) {
             defaultTV.append("\nSci-Fi is checked.");
-            scifiState = true;
+            selectedGeneres |= SCIFI_BIT;
         }
 
         //IF all others fail and the TextView is still blank, return an error

@@ -18,6 +18,11 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        Bundle extras = getIntent().getExtras();
+        if (extras != null){
+            int selectedGenres = extras.getInt("selection");
+        }
+
         goBackButton = findViewById(R.id.goBackButton);
         goBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,9 +37,14 @@ public class MainActivity2 extends AppCompatActivity {
         startActivityForResult(secondaryActivity, 0);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        }
+
+
     public void resultDisplay(){
-//        outputView.action.titlesA.indexOf();
-        recommendationOutput.setText(outputView.actionNumberGenerated);
+
     }
 
 //    public void messages(){
