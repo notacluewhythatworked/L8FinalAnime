@@ -22,57 +22,60 @@ public class Recommendations {
         this.selectedNums = selectedNums;
     }
 
-    public void actionRecommend(){
+    public String actionRecommend(){
         if((selectedNums & MainActivity.ACTION_BIT) == MainActivity.ACTION_BIT) {
-            //User included Action Genre
-
-            //attempting to access the array's size so we can have a dynamically changing size and not worry about not including some results because of restraints
-            //after accessing the array size, generate a random number for a recommendation
-            actionNumberGenerated = getRandNum(action.titlesA.size(), 0);
-            previous.getAction()[0] = actionNumberGenerated;
-            actionTitle1 = action.titlesA.get(actionNumberGenerated);
-//            outputs.outputView.setText(actionTitle1);
+            return action.titlesA.get(getRandNum(action.titlesA.size() - 1, 0));
         }
+        return "";
     }
 
-    public void dramaRecommend(){
+    public String dramaRecommend(){
         if((selectedNums & MainActivity.DRAMA_BIT) == MainActivity.DRAMA_BIT) {
-            getRandNum(drama.titlesD.size(), 0);
+            return drama.titlesD.get(getRandNum(drama.titlesD.size() - 1, 0));
         }
+        return "";
     }
 
-    public void horrorRecommend(){
+    public String horrorRecommend(){
         if((selectedNums & MainActivity.HORROR_BIT) == MainActivity.HORROR_BIT) {
-            getRandNum(horror.titlesH.size(), 0);
+            return horror.titlesH.get(getRandNum(horror.titlesH.size() - 1, 0));
         }
+        return "";
     }
 
-    public void musicRecommend() {
+    public String musicRecommend() {
         if ((selectedNums & MainActivity.MUSIC_BIT) == MainActivity.MUSIC_BIT) {
-            getRandNum(music.titlesMu.size(), 0);
+            return music.titlesMu.get(getRandNum(music.titlesMu.size() - 1, 0));
         }
+        return "";
     }
-    public void mysteryRecommend() {
+
+    public String mysteryRecommend() {
         if ((selectedNums & MainActivity.MYSTERY_BIT) == MainActivity.MYSTERY_BIT) {
-            getRandNum(mystery.titlesMy.size(), 0);
+            return mystery.titlesMy.get(getRandNum(mystery.titlesMy.size() - 1, 0));
         }
+        return "";
     }
 
-    public void romanceRecommend() {
+    public String romanceRecommend() {
         if ((selectedNums & MainActivity.ROMANCE_BIT) == MainActivity.ROMANCE_BIT) {
-            getRandNum(romance.titlesR.size(), 0);
+            return romance.titlesR.get(getRandNum(romance.titlesR.size() - 1, 0));
         }
-    }
-    public void schoolLifeRecommend() {
-        if ((selectedNums & MainActivity.SCHOOLLIFE_BIT) == MainActivity.SCHOOLLIFE_BIT) {
-            getRandNum(schoolLife.titlesSL.size(), 0);
-        }
+        return "";
     }
 
-    public void scifiRecommend() {
-        if ((selectedNums & MainActivity.SCIFI_BIT) == MainActivity.SCIFI_BIT) {
-            getRandNum(scifi.titlesSF.size(), 0);
+    public String schoolLifeRecommend() {
+        if ((selectedNums & MainActivity.SCHOOLLIFE_BIT) == MainActivity.SCHOOLLIFE_BIT) {
+            return schoolLife.titlesSL.get(getRandNum(schoolLife.titlesSL.size() - 1, 0));
         }
+        return "";
+    }
+
+    public String scifiRecommend() {
+        if ((selectedNums & MainActivity.SCIFI_BIT) == MainActivity.SCIFI_BIT) {
+            return scifi.titlesSF.get(getRandNum(scifi.titlesSF.size() - 1, 0));
+        }
+        return "";
     }
 
     //Generates a random number based on ArrayList sizes to retrieve a title

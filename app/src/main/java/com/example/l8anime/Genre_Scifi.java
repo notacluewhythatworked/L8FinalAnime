@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Genre_Scifi {
     public ArrayList<String> titlesSF = new ArrayList<String>();
-    public void sciFi(String[] args){
+    public Genre_Scifi(){
         titlesSF.add("Cowboy Bebop");
         titlesSF.add("Code Geass: Hangyaku no Lelouch");
         titlesSF.add("Neon Genesis Evangelion");

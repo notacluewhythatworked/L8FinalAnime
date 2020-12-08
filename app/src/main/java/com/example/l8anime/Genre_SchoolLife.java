@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Genre_SchoolLife {
     public ArrayList<String> titlesSL = new ArrayList<String>();
-    public void schoolLife(String[] args){
+    public Genre_SchoolLife(){
         titlesSL.add("Chuunibyou demo Koi ga Shitai!");
         titlesSL.add("Rosario to Vampire");
         titlesSL.add("Kami nomi zo Shiru Sekai");

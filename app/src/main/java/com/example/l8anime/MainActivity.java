@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private Switch action, drama, horror, music, mystery, romance, schoolLife, scifi;
     private Button submitButton;
     private TextView defaultTV;
-    private int selectedGeneres = 0;
+    public int selectedGeneres = 0;
     public static final int ACTION_BIT      = 0b00000001;
     public static final int DRAMA_BIT       = 0b00000010;
     public static final int HORROR_BIT      = 0b00000100;
@@ -107,17 +107,5 @@ public class MainActivity extends AppCompatActivity {
             defaultTV.append("\nSci-Fi is checked.");
             selectedGeneres |= SCIFI_BIT;
         }
-
-        //IF all others fail and the TextView is still blank, return an error
-        if (defaultTV.getText().toString().matches("")) {
-            defaultTV.setText(errorReturn());
-            defaultTV.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-        }
-    }
-
-    //returns an error
-    public String errorReturn(){
-        String error1 = "There is no genre selected. Please select at least one genre and try again.";
-        return error1;
     }
 }

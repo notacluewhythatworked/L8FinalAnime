@@ -3,6 +3,8 @@ package com.example.l8anime;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.text.Html;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,16 +14,23 @@ public class MainActivity2 extends AppCompatActivity {
     private Button goBackButton;
     private TextView recommendationOutput;
     Recommendations outputView = new Recommendations();
+    int selectedGenres = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        recommendationOutput = findViewById(R.id.recommendationOutput);
+
         Bundle extras = getIntent().getExtras();
-        if (extras != null){
-            int selectedGenres = extras.getInt("selection");
+        if (extras != null) {
+            selectedGenres = extras.getInt("selection");
+            System.out.println("SELECTED: " + selectedGenres);
         }
+
+        outputView.selectedNums = selectedGenres;
+        resultDisplay();
 
         goBackButton = findViewById(R.id.goBackButton);
         goBackButton.setOnClickListener(new View.OnClickListener() {
@@ -44,7 +53,36 @@ public class MainActivity2 extends AppCompatActivity {
 
 
     public void resultDisplay(){
+        if (selectedGenres == 0){
+            recommendationOutput.setText(errorReturn());
+        } else {
+            recommendationOutput.setText("");
+            if (outputView.actionRecommend() != ""){
+                recommendationOutput.append(Html.fromHtml("<b>Action: </b>") + outputView.actionRecommend() + "\n");
+            } if (outputView.dramaRecommend() != ""){
+                recommendationOutput.append(Html.fromHtml("<b>Drama: </b>") + outputView.dramaRecommend() + "\n");
+            } if (outputView.horrorRecommend() != ""){
+                recommendationOutput.append(Html.fromHtml("<b>Horror: </b>") + outputView.horrorRecommend() + "\n");
+            } if (outputView.musicRecommend() != ""){
+                recommendationOutput.append(Html.fromHtml("<b>Music: </b>") + outputView.musicRecommend() + "\n");
+            } if (outputView.mysteryRecommend() != ""){
+                recommendationOutput.append(Html.fromHtml("<b>Mystery: </b>") + outputView.mysteryRecommend() + "\n");
+            } if (outputView.romanceRecommend() != ""){
+                recommendationOutput.append(Html.fromHtml("<b>Romance: </b>") + outputView.romanceRecommend() + "\n");
+            } if (outputView.schoolLifeRecommend() != ""){
+                recommendationOutput.append(Html.fromHtml("<b>School Life: </b>") + outputView.schoolLifeRecommend() + "\n");
+            } if (outputView.scifiRecommend() != "") {
+                recommendationOutput.append(Html.fromHtml("<b>Sci-Fi: </b>") + outputView.scifiRecommend() + "\n");
+            }
 
+//            recommendationOutput.setTypeface(null, Typeface.BOLD);
+        }
+    }
+
+    //returns an error
+    public String errorReturn(){
+        String error1 = "There is no genre selected. Please select at least one genre and try again.";
+        return error1;
     }
 
 //    public void messages(){

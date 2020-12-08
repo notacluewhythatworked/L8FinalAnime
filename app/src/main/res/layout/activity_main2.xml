@@ -6,12 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="577dp"
+        android:layout_height="941dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fkxzezn" />
+
     <TextView
         android:id="@+id/recommendationOutput"
         android:layout_width="367dp"
         android:layout_height="437dp"
         android:gravity="center|center_horizontal|center_vertical"
         android:textAlignment="center"
+        android:textColor="#C1C1C1"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +34,9 @@
         android:id="@+id/goBackButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#0A122C"
         android:text="Go Back"
+        app:iconTint="#0A122C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
