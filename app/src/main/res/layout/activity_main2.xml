@@ -8,27 +8,29 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="577dp"
-        android:layout_height="941dp"
+        android:layout_width="469dp"
+        android:layout_height="828dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fkxzezn" />
+        app:layout_constraintVertical_bias="0.509"
+        app:srcCompat="@drawable/_67_1672309_wikipe_tan_holding_sign_transparent_anime_girl_holding" />
 
     <TextView
         android:id="@+id/recommendationOutput"
-        android:layout_width="367dp"
-        android:layout_height="437dp"
+        android:layout_width="308dp"
+        android:layout_height="217dp"
         android:gravity="center|center_horizontal|center_vertical"
         android:textAlignment="center"
-        android:textColor="#C1C1C1"
-        android:textSize="24sp"
+        android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.149" />
+        app:layout_constraintVertical_bias="0.324" />
 
     <Button
         android:id="@+id/goBackButton"
