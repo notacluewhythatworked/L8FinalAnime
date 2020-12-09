@@ -63,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
         //check if Action is checked
         if (action.isChecked()) {
             defaultTV.append("\nAction is checked.");
+
+            /*if checked, take the ACTION_BIT and set it to selectedGenres. Selected genres will
+            take this binary number, and check if its on or not before passing the info to the
+            second main class.
+             */
             selectedGeneres |= ACTION_BIT;
         }
 

@@ -12,15 +12,10 @@ public class Recommendations {
     Genre_SchoolLife schoolLife = new Genre_SchoolLife();
     Genre_Scifi scifi = new Genre_Scifi();
     MainActivity switches = new MainActivity();
-    int actionNumberGenerated = 0;
-    int selectedNums = 0;
-    String actionTitle1 = null;
+//    private int actionNumberGenerated = 0;
+    public int selectedNums = 0;
     private Random rng = new Random();
-    private PreviousResults previous;
-
-    public void setSelectedNums(int selectedNums){
-        this.selectedNums = selectedNums;
-    }
+//    private PreviousResults previous;
 
     public String actionRecommend(){
         if((selectedNums & MainActivity.ACTION_BIT) == MainActivity.ACTION_BIT) {

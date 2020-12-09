@@ -14,7 +14,7 @@ public class MainActivity2 extends AppCompatActivity {
     private Button goBackButton;
     private TextView recommendationOutput;
     Recommendations outputView = new Recommendations();
-    int selectedGenres = 0;
+    private int selectedGenres = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,8 +74,6 @@ public class MainActivity2 extends AppCompatActivity {
             } if (outputView.scifiRecommend() != "") {
                 recommendationOutput.append(Html.fromHtml("<b>Sci-Fi: </b>") + outputView.scifiRecommend() + "\n");
             }
-
-//            recommendationOutput.setTypeface(null, Typeface.BOLD);
         }
     }
 
